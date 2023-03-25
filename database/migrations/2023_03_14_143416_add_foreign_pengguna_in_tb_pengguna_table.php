@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('tb_pengguna', function (Blueprint $table) {
-            $table->string('jurusan', 50)->after('nama_pengguna')->unique('jurusan');
+            $table->string('jurusan', 50)->after('nama_pengguna')->index('jurusan');
             $table->foreign('jurusan')->references('nama_jurusan')->on('jurusan');
         });
     }

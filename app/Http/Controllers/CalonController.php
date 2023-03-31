@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\CalonKetua;
 use Illuminate\Http\Request;
-use App\Models\PenggunaPemira;
 
 
 class CalonController extends Controller
 {
     public function index()
     {
-        $kandidat = PenggunaPemira::all();
+        $kandidat = CalonKetua::all();
         return view('kandidat', ['kandidatList'=>$kandidat]);
     }
 }

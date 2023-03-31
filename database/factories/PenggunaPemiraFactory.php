@@ -22,7 +22,7 @@ class PenggunaPemiraFactory extends Factory
         $faker = Faker::create();
         return [
             'nama_pengguna' => $faker->name(),
-            'jurusan' => Arr::random(['Teknik Informatika', 'Teknik Mesin', 'Teknik Listrik']),
+            'id_jurusan' => $faker->randomDigitNotNull(),
             'username' => $faker->userName(),
             'password' => $faker->password(),
             'level' => 'Pemilih',

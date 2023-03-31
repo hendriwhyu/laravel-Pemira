@@ -19,7 +19,7 @@
                     @foreach ($ListJurusan as $data)
                    <tr>
                         <th scope="row">{{$loop->iteration}}</th>
-                        <td class="w-100"><a href="/jurusan/{{$data->id_jurusan}}">{{$data->nama_jurusan}}</a></td>
+                        <td class="w-100"><a href="/admin/jurusan/{{$data->id_jurusan}}">{{$data->nama_jurusan}}</a></td>
                    </tr>
                    @endforeach
                 </tbody>

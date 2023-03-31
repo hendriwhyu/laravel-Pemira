@@ -19,7 +19,8 @@ class JurusanSeeder extends Seeder
             ['nama_jurusan' => 'Rekayas Keamanan Siber'],
             ['nama_jurusan' => 'Teknik Pengendalian Pencemaran Lingkungan'],
             ['nama_jurusan' => 'Pengembangan Produk Agroindustri'],
-            ['nama_jurusan' => 'Akuntansi Lembaga Keuangan Syariah']
+            ['nama_jurusan' => 'Akuntansi Lembaga Keuangan Syariah'],
+            ['nama_jurusan' => 'Rekayasa Multimedia']
         ];
         foreach ($data as $value) {
             Jurusan::insert([

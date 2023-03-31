@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('tb_pengguna', function (Blueprint $table) {
-            $table->string('jurusan', 50)->after('nama_pengguna')->index('jurusan');
-            $table->foreign('jurusan')->references('nama_jurusan')->on('jurusan');
+            $table->integer('id_jurusan')->after('nama_pengguna')->index('id_jurusan');
+            $table->foreign('id_jurusan')->references('id_jurusan')->on('jurusan');
         });
     }
 
@@ -23,9 +23,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('tb_pengguna', function (Blueprint $table) {
-            $table->dropForeign(['jurusan']);
+            $table->dropForeign(['id_jurusan']);
             $table->dropUnique('tb_pengguna_jurusan_unique');
-            $table->dropColumn(['jurusan']);
+            $table->dropColumn(['id_jurusan']);
         });
     }
 };
